@@ -1,8 +1,11 @@
+from datetime import date
 from uuid import uuid4
+
+from Alojamiento import Alojamiento
 
 
 class Reserva:
-    def __init__(self, estado, alojamiento, fecha_inicio, fecha_fin, valor_total):
+    def __init__(self, estado: str, alojamiento: 'Alojamiento', fecha_inicio: date, fecha_fin: date, valor_total: float):
         self.identificador = str(uuid4())
         self.__estado = estado
         self.__alojamiento = alojamiento

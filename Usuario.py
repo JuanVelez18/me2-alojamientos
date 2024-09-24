@@ -1,3 +1,6 @@
+from Reserva import Reserva
+
+
 class Usuario:
     def __init__(self, identificacion, nombre, apellido, email, fecha_nacimiento):
         self.__identificacion = identificacion
@@ -50,7 +53,7 @@ class Usuario:
         return f'{self.__identificacion} - {self.__nombre} {self.__apellido} - {self.__email} - {self.__fecha_nacimiento}'
 
     def solicitar_reserva(self, estado, alojamiento, fecha_inicio, fecha_fin, valor_total):
-        pass
+        return Reserva(estado, alojamiento, fecha_inicio, fecha_fin, valor_total)
 
     def cancelar_reserva(self, reserva):
-        pass
+        reserva.estado = 'Cancelada'
